@@ -132,32 +132,32 @@
     }
     .names {
       position: absolute;
-      bottom: 8%;
+      bottom: 10%;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
       color: #fff;
-      font-size: clamp(56px, 12vw, 130px);
+      font-size: clamp(64px, 14vw, 150px);
       line-height: 1.2;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
       font-weight: 400;
       white-space: nowrap;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
     .names .amp {
-      font-size: 0.8em;
+      font-size: 0.7em;
       opacity: 0.7;
     }
     .date {
       position: absolute;
       right: 6%;
-      top: 35%;
+      top: 32%;
       color: #fff;
       text-align: right;
       font-size: clamp(48px, 9vw, 110px);
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
       line-height: 1.1;
       font-weight: 400;
     }
@@ -185,10 +185,32 @@
       color: #2c2c2c;
     }
 
+    /* ===== 4 ФОТО КВАДРАТОМ (без заголовка) ===== */
+    .story-photos {
+      background: #ffffff;
+      text-align: center;
+      padding: 40px 20px 50px;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .story-grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
     /* ===== ПРИГЛАШЕНИЕ ===== */
     .invite-block {
       background: #ffffff;
       text-align: center;
+      padding-top: 20px;
     }
     .frame {
       background: #fff;
@@ -196,12 +218,12 @@
       display: inline-block;
       box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
       margin-bottom: 40px;
-      width: 90%;
-      max-width: 420px; /* увеличен в 1,5 раза относительно 280px */
+      width: 92%;
+      max-width: 560px; /* сильно увеличил ширину */
     }
     .frame img {
       width: 100%;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
     }
@@ -283,10 +305,10 @@
       color: #4a4a4a;
     }
 
-    /* ===== МЕСТО ПРОВЕДЕНИЯ (белый фон) ===== */
+    /* ===== МЕСТО ПРОВЕДЕНИЯ (оформлен как Тайминг — тёмный фон) ===== */
     .location {
-      background: #ffffff;
-      color: #1a1a1a;
+      background: #b7a99a;
+      color: #ffffff;
       text-align: center;
       padding: 70px 20px;
     }
@@ -295,11 +317,11 @@
       font-weight: 400;
       letter-spacing: 3px;
       margin-bottom: 5px;
-      color: #1a1a1a;
+      color: #ffffff;
     }
     .location .sub {
       font-size: 36px;
-      opacity: 0.7;
+      opacity: 0.9;
       margin-bottom: 30px;
       font-family: 'Cormorant Garamond', serif;
     }
@@ -307,40 +329,44 @@
       font-weight: 500;
       font-size: 22px;
       margin-bottom: 8px;
-      color: #1a1a1a;
+      color: #ffffff;
     }
     .address {
       font-size: 18px;
-      color: #555;
+      color: rgba(255,255,255,0.85);
       line-height: 1.6;
     }
     .btn-location {
       display: inline-block;
       margin-top: 28px;
       padding: 16px 44px;
-      background: #1a1a1a;
-      color: #fff;
+      border: 1px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
       text-decoration: none;
       font-size: 16px;
       letter-spacing: 1.5px;
       border-radius: 30px;
-      transition: background 0.3s;
-      border: none;
+      transition: 0.3s;
       cursor: pointer;
     }
-    .btn-location:hover { background: #333; }
+    .btn-location:hover {
+      background: #ffffff;
+      color: #b7a99a;
+    }
     .location-photo {
       margin-top: 44px;
-      max-width: 340px; /* уменьшил ширину, чтобы фото было не слишком широким */
+      max-width: 340px;
       margin-left: auto;
       margin-right: auto;
+      border: 4px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      overflow: hidden;
     }
     .location-photo img {
       width: 100%;
       display: block;
-      border-radius: 8px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      aspect-ratio: 4 / 3; /* прямоугольное */
+      aspect-ratio: 4 / 3;
       object-fit: cover;
     }
 
@@ -456,7 +482,7 @@
       height: 100%;
     }
     .wedding-block h1 {
-      margin-top: 20px; /* поднял выше */
+      margin-top: 20px;
       font-size: clamp(38px, 8vw, 56px);
       letter-spacing: 3px;
       font-weight: 400;
@@ -466,7 +492,7 @@
       display: flex;
       justify-content: center;
       gap: 50px;
-      margin-bottom: 60px; /* опустил ниже */
+      margin-bottom: 60px;
       flex-wrap: wrap;
     }
     .wedding-block .timer div {
@@ -562,7 +588,7 @@
       font-weight: 400;
     }
     .rsvp .subtitle {
-      display: none; /* скрываем "Rsvp" */
+      display: none;
     }
     .rsvp .note {
       font-size: 18px;
@@ -602,7 +628,6 @@
       color: rgba(255,255,255,0.6);
     }
 
-    /* Улучшенные радио и чекбоксы */
     .radio-group {
       margin: 15px 0 10px;
     }
@@ -661,12 +686,6 @@
       color: #b7a99a;
       font-size: 16px;
       font-weight: 700;
-    }
-    .checkbox-group label:has(input:checked)::before {
-      content: '✓';
-      color: #b7a99a;
-      font-size: 16px;
-      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -700,9 +719,9 @@
     /* ----- АДАПТИВНОСТЬ ----- */
     @media (max-width: 768px) {
       section { padding: 60px 16px; }
-      .hero .names { font-size: clamp(44px, 9vw, 70px); gap: 8px; }
-      .hero .date { font-size: clamp(36px, 7vw, 60px); right: 4%; top: 30%; }
-      .frame { max-width: 340px; }
+      .hero .names { font-size: clamp(44px, 9vw, 72px); gap: 10px; }
+      .hero .date { font-size: clamp(36px, 7vw, 60px); right: 4%; top: 28%; }
+      .frame { max-width: 440px; }
       .invite-block h2 { font-size: 36px; }
       .invite-block p { font-size: 17px; }
       .location h2 { font-size: 40px; }
@@ -741,13 +760,14 @@
       .heart-number { width: 44px; height: 44px; }
       .heart-number i { font-size: 44px; }
       .heart-number span { font-size: 20px; }
+      .story-grid { max-width: 340px; gap: 12px; }
     }
 
     @media (max-width: 480px) {
       section { padding: 50px 12px; }
       .hero .names { font-size: clamp(32px, 7vw, 48px); gap: 6px; flex-wrap: wrap; white-space: normal; }
-      .hero .date { font-size: clamp(28px, 6vw, 40px); right: 4%; top: 26%; }
-      .frame { max-width: 280px; }
+      .hero .date { font-size: clamp(28px, 6vw, 40px); right: 4%; top: 24%; }
+      .frame { max-width: 320px; }
       .invite-block h2 { font-size: 30px; }
       .invite-block p { font-size: 15px; }
       .location h2 { font-size: 34px; }
@@ -792,6 +812,7 @@
       .month { font-size: 28px; }
       .footer-text { font-size: 15px; }
       .checkbox-group { flex-direction: column; gap: 4px; }
+      .story-grid { max-width: 280px; gap: 10px; }
     }
   </style>
 </head>
@@ -824,7 +845,17 @@
   <audio id="weddingAudio" src="music.mp3" loop preload="auto"></audio>
 </div>
 
-<!-- ПРИГЛАШЕНИЕ -->
+<!-- 4 КВАДРАТНЫХ ФОТО (без заголовка) -->
+<section class="story-photos">
+  <div class="story-grid fade-item">
+    <img src="молодые2.jpeg" alt="Фото 1">
+    <img src="молодые3.jpeg" alt="Фото 2">
+    <img src="молодые4.jpeg" alt="Фото 3">
+    <img src="молодые5.jpeg" alt="Фото 4">
+  </div>
+</section>
+
+<!-- ПРИГЛАШЕНИЕ (фото увеличено) -->
 <section class="invite-block">
   <div class="frame fade-item"><img src="молодые5.jpeg" alt="Пара"></div>
   <h2 class="fade-item">РОДНЫЕ И ЛЮБИМЫЕ!</h2>
@@ -840,7 +871,7 @@
   <p class="footer-text fade-item">Мы будем безумно рады видеть вас в кругу наших гостей</p>
 </section>
 
-<!-- МЕСТО ПРОВЕДЕНИЯ (белый фон) -->
+<!-- МЕСТО ПРОВЕДЕНИЯ (теперь в стиле Тайминга) -->
 <section class="location">
   <h2 class="fade-item">МЕСТО</h2>
   <div class="sub fade-item">проведения</div>
@@ -894,7 +925,7 @@
   <p class="wishes-text fade-item">Главное для нас – ваше внимание, а радость доставит любой подарок в конверте!</p>
 </section>
 
-<!-- ТАЙМЕР (увеличен, заголовок выше, отсчёт ниже) -->
+<!-- ТАЙМЕР -->
 <section class="wedding-block">
   <div class="overlay"></div>
   <div class="content">
@@ -908,7 +939,7 @@
   </div>
 </section>
 
-<!-- АНКЕТА (без Rsvp) -->
+<!-- АНКЕТА -->
 <section class="rsvp">
   <div class="container">
     <h2 class="fade-item">АНКЕТА ГОСТЯ</h2>
