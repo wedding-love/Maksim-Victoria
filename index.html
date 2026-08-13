@@ -94,7 +94,7 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Уменьшаем отступы между блоками и внутри них */
+    /* Уменьшаем отступы между блоками */
     section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
       margin: 0;
       padding: 50px 20px;
@@ -115,22 +115,27 @@
       transform: translateY(0);
     }
 
-    /* ===== ПЕРВЫЙ БЛОК (как в примере) ===== */
+    /* ===== ПЕРВЫЙ БЛОК (как в примере, компактный) ===== */
     .block-1 {
-      padding: 40px 20px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px 20px 30px;
       text-align: center;
       background-color: #ffffff;
     }
     .block-1 .date-top {
-      font-size: 20px;
+      font-size: 18px;
       letter-spacing: 3px;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       color: #333;
       font-weight: 400;
     }
     .block-1 .photo-wrapper {
       width: 100%;
-      margin-bottom: 30px;
+      max-width: 360px;
+      margin: 0 auto 16px;
       opacity: 0;
       transform: scale(0.96);
       transition: opacity 1s ease, transform 1s ease;
@@ -142,29 +147,29 @@
     .block-1 .couple-photo {
       width: 100%;
       display: block;
-      filter: grayscale(100%);
       border-radius: 0;
+      /* без grayscale */
     }
     .block-1 .names-section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 25px;
+      margin-bottom: 12px;
     }
     .block-1 .line {
       display: flex;
       align-items: baseline;
-      gap: 10px;
+      gap: 8px;
     }
     .block-1 .name {
-      font-size: clamp(28px, 8vw, 42px);
+      font-size: clamp(24px, 6vw, 36px);
       text-transform: uppercase;
       letter-spacing: 3px;
       font-weight: 400;
       color: #1a1a1a;
     }
     .block-1 .script-text {
-      font-size: clamp(32px, 9vw, 48px);
+      font-size: clamp(28px, 7vw, 42px);
       color: #555;
       font-weight: 300;
     }
@@ -172,12 +177,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
-      margin-top: 5px;
+      gap: 6px;
+      margin-top: 4px;
     }
     .block-1 .audio-btn {
-      width: 54px;
-      height: 54px;
+      width: 48px;
+      height: 48px;
       border: 1.5px solid #1a1a1a;
       border-radius: 50%;
       display: flex;
@@ -187,13 +192,13 @@
       background: transparent;
       transition: background 0.2s;
       color: #1a1a1a;
-      font-size: 22px;
+      font-size: 20px;
     }
     .block-1 .audio-btn:hover {
       background-color: #f5f5f5;
     }
     .block-1 .player-label {
-      font-size: 11px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 2.5px;
       color: #888;
@@ -441,16 +446,23 @@
       flex: 0 0 52px;
     }
 
-    /* ===== ПОЖЕЛАНИЯ ===== */
+    /* ===== ПОЖЕЛАНИЯ (с подзаголовком "wishes") ===== */
     .wishes-block {
       background: #ffffff;
       text-align: center;
-      padding: 40px 20px 60px;
+      padding: 50px 20px 60px;
     }
     .wishes-block h2 {
       font-size: 44px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       font-weight: 400;
+    }
+    .wishes-block .subtitle {
+      font-size: 28px;
+      color: #a0a0a0;
+      margin-bottom: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 1.5px;
     }
     .wishes-text {
       font-size: 20px;
@@ -731,10 +743,12 @@
       section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
         padding: 40px 16px;
       }
-      .block-1 { padding: 30px 16px 40px; }
-      .block-1 .name { font-size: clamp(24px, 6vw, 34px); }
-      .block-1 .script-text { font-size: clamp(28px, 7vw, 38px); }
-      .block-1 .date-top { font-size: 18px; }
+      .block-1 { padding: 16px 16px 20px; }
+      .block-1 .photo-wrapper { max-width: 300px; margin-bottom: 12px; }
+      .block-1 .name { font-size: clamp(20px, 5vw, 30px); }
+      .block-1 .script-text { font-size: clamp(24px, 6vw, 34px); }
+      .block-1 .date-top { font-size: 16px; margin-bottom: 10px; }
+      .block-1 .audio-btn { width: 44px; height: 44px; font-size: 18px; }
       .invite-block h2 { font-size: 38px; }
       .location h2 { font-size: 38px; }
       .location .sub { font-size: 26px; }
@@ -752,6 +766,7 @@
       .color-square { width: 44px; height: 44px; flex: 0 0 44px; }
       .color-squares { max-width: 320px; gap: 10px; }
       .wishes-block h2 { font-size: 38px; }
+      .wishes-block .subtitle { font-size: 26px; }
       .wishes-text { font-size: 18px; }
       .rsvp h2 { font-size: 38px; }
       .rsvp .note { font-size: 16px; }
@@ -779,11 +794,13 @@
       section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
         padding: 30px 12px;
       }
-      .block-1 { padding: 20px 12px 30px; }
-      .block-1 .name { font-size: clamp(20px, 5vw, 28px); }
-      .block-1 .script-text { font-size: clamp(24px, 6vw, 32px); }
-      .block-1 .date-top { font-size: 16px; }
-      .block-1 .audio-btn { width: 46px; height: 46px; font-size: 18px; }
+      .block-1 { padding: 12px 12px 16px; min-height: 100vh; justify-content: center; }
+      .block-1 .photo-wrapper { max-width: 260px; margin-bottom: 10px; }
+      .block-1 .name { font-size: clamp(18px, 4.5vw, 26px); }
+      .block-1 .script-text { font-size: clamp(20px, 5vw, 28px); }
+      .block-1 .date-top { font-size: 14px; margin-bottom: 8px; }
+      .block-1 .audio-btn { width: 40px; height: 40px; font-size: 16px; }
+      .block-1 .player-label { font-size: 9px; }
       .invite-block h2 { font-size: 32px; }
       .invite-block p { font-size: 15px; }
       .location h2 { font-size: 32px; }
@@ -803,6 +820,7 @@
       .color-square { width: 38px; height: 38px; flex: 0 0 38px; }
       .color-squares { max-width: 270px; gap: 8px; }
       .wishes-block h2 { font-size: 32px; }
+      .wishes-block .subtitle { font-size: 24px; }
       .wishes-text { font-size: 16px; }
       .rsvp h2 { font-size: 32px; }
       .rsvp .note { font-size: 14px; }
@@ -842,7 +860,7 @@
 
 <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
 
-<!-- ПЕРВЫЙ БЛОК (в стиле примера) -->
+<!-- ПЕРВЫЙ БЛОК (компактный, без grayscale) -->
 <section class="block-1">
   <div class="date-top fade-item">14.11.2026</div>
   <div class="photo-wrapper fade-item" id="mainPhotoWrapper">
@@ -941,9 +959,10 @@
   <p class="fade-item" style="margin-top:10px;">Захватите с собой удобную обувь для танцев!</p>
 </section>
 
-<!-- ПОЖЕЛАНИЯ -->
+<!-- ПОЖЕЛАНИЯ (с подзаголовком wishes) -->
 <section class="wishes-block">
   <h2 class="fade-item">Пожелания</h2>
+  <div class="subtitle fade-item">wishes</div>
   <p class="wishes-text fade-item">Главное для нас – ваше внимание, а радость доставит любой подарок в конверте!</p>
 </section>
 
