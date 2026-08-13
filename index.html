@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-  <!-- ===== META ДЛЯ ПОИСКОВИКОВ И СОЦСЕТЕЙ ===== -->
   <title>Свадьба Максима & Виктории — 14.11.2026</title>
   <meta name="description" content="Приглашаем вас на свадьбу Максима и Виктории! Торжество состоится 14 ноября 2026 в ресторане «Зелёный Луг» (Минск). Ждём вас!">
 
-  <!-- Каноническая ссылка -->
   <link rel="canonical" href="https://wedding-love.github.io/Maksim-Victoria/">
 
-  <!-- Open Graph (Facebook, VK, Telegram и др.) -->
   <meta property="og:title" content="Свадьба Максима и Виктории — 14.11.2026">
   <meta property="og:description" content="Приглашаем вас разделить с нами радость этого дня! Свадьба состоится 14 ноября 2026 в ресторане «Зелёный Луг» (Минск). Будем рады видеть вас!">
   <meta property="og:image" content="https://wedding-love.github.io/Maksim-Victoria/молодые.jpeg">
@@ -19,13 +16,11 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Свадьба Максима & Виктории — 14.11.2026">
   <meta name="twitter:description" content="Приглашаем вас на нашу свадьбу! Ждём 14 ноября 2026 в ресторане «Зелёный Луг» (Минск).">
   <meta name="twitter:image" content="https://wedding-love.github.io/Maksim-Victoria/молодые.jpeg">
 
-  <!-- Шрифты и иконки -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -46,7 +41,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 3rem;
       margin-bottom: 10px;
-      color: #b7a99a; /* бежевый */
+      color: #b7a99a;
     }
     .loader-bar-bg {
       width: 150px;
@@ -60,31 +55,19 @@
       left: 0; top: 0;
       height: 100%;
       width: 0;
-      background: #b7a99a; /* бежевый */
+      background: #b7a99a;
       transition: width 0.3s ease;
       border-radius: 2px;
     }
 
     /* ----- СТИЛИЗАЦИЯ ПОЛОСЫ ПРОКРУТКИ ----- */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f9f7f2;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #b7a99a;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #a18e7c;
-    }
-    * {
-      scrollbar-width: thin;
-      scrollbar-color: #b7a99a #f9f7f2;
-    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f9f7f2; }
+    ::-webkit-scrollbar-thumb { background: #b7a99a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a18e7c; }
+    * { scrollbar-width: thin; scrollbar-color: #b7a99a #f9f7f2; }
 
-    /* ----- ГЛОБАЛЬНЫЕ СТИЛИ ----- */
+    /* ----- ГЛОБАЛЬНЫЕ СТИЛИ (увеличенные шрифты) ----- */
     * {
       margin: 0;
       padding: 0;
@@ -95,7 +78,7 @@
       font-family: 'Inter', sans-serif;
       background-color: #ffffff;
       color: #1e1e1e;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     h1, h2, h3, .hero .names, .date, .love, .title, .month, .location h2, .timing h2,
@@ -104,7 +87,7 @@
     .timer span, .calendar-date, .wishes-block h2 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
     }
 
     p, .text, .desc, .person, .address, .footer-text, .note, label, .radio-group, button, .btn, .btn-location, .time, .wishes-text {
@@ -113,20 +96,20 @@
 
     section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
       margin: 0;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     .hero, .wedding-block {
       padding: 0;
     }
 
-    /* ----- АНИМАЦИЯ ПОЯВЛЕНИЯ (fade-up) ----- */
-    .fade-section {
+    /* ----- АНИМАЦИЯ ТОЛЬКО ДЛЯ ТЕКСТА И ФОТО (блоки статичны) ----- */
+    .fade-item {
       opacity: 0;
       transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s ease;
+      transition: opacity 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.9s ease;
     }
-    .fade-section.visible {
+    .fade-item.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -149,27 +132,31 @@
     }
     .names {
       position: absolute;
-      bottom: 6%;
+      bottom: 8%;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
       color: #fff;
-      font-size: clamp(48px, 10vw, 120px);
+      font-size: clamp(56px, 12vw, 130px);
       line-height: 1.2;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-      text-transform: capitalize;
       font-weight: 400;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     .names .amp {
-      font-size: 0.9em;
+      font-size: 0.8em;
+      opacity: 0.7;
     }
     .date {
       position: absolute;
       right: 6%;
-      top: 38%;
+      top: 35%;
       color: #fff;
       text-align: right;
-      font-size: clamp(40px, 8vw, 100px);
+      font-size: clamp(48px, 9vw, 110px);
       text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
       line-height: 1.1;
       font-weight: 400;
@@ -184,62 +171,18 @@
     .music button {
       background: transparent;
       border: none;
-      font-size: 44px;
+      font-size: 48px;
       cursor: pointer;
       color: #1e1e1e;
       transition: transform 0.2s;
       padding: 0;
     }
-    .music button:hover {
-      transform: scale(1.05);
-    }
+    .music button:hover { transform: scale(1.05); }
     .music-text {
-      font-size: 18px;
-      letter-spacing: 2px;
+      font-size: 20px;
+      letter-spacing: 3px;
       margin-top: 12px;
       color: #2c2c2c;
-    }
-
-    /* ===== НАША ИСТОРИЯ (4 квадратных фото) ===== */
-    .story {
-      background: #ffffff;
-      text-align: center;
-    }
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      max-width: 360px;
-      margin: 0 auto 30px;
-    }
-    .story-grid img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 4px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    }
-    .love {
-      font-size: clamp(44px, 8vw, 68px);
-      margin-bottom: 10px;
-      font-weight: 400;
-    }
-    .heart-icon {
-      color: #b13e4b;
-      font-size: 1.2em;
-      display: inline-block;
-    }
-    .title {
-      font-size: 28px;
-      margin: 20px 0 16px;
-      font-weight: 400;
-    }
-    .text {
-      max-width: 560px;
-      margin: 0 auto;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #3e3e3e;
     }
 
     /* ===== ПРИГЛАШЕНИЕ ===== */
@@ -249,26 +192,29 @@
     }
     .frame {
       background: #fff;
-      padding: 10px 10px 18px 10px;
+      padding: 12px 12px 20px 12px;
       display: inline-block;
       box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
-      margin-bottom: 35px;
+      margin-bottom: 40px;
+      width: 90%;
+      max-width: 420px; /* увеличен в 1,5 раза относительно 280px */
     }
     .frame img {
-      width: 280px;
-      height: 280px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
       object-fit: cover;
+      display: block;
     }
     .invite-block h2 {
-      font-size: 38px;
+      font-size: 42px;
       margin-bottom: 20px;
       font-weight: 400;
     }
     .invite-block p {
-      max-width: 560px;
+      max-width: 600px;
       margin: 0 auto;
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 19px;
+      line-height: 1.8;
       color: #444;
     }
 
@@ -279,28 +225,28 @@
     }
     .month {
       margin-bottom: 24px;
-      font-size: 30px;
+      font-size: 34px;
       font-weight: 400;
     }
     .weekdays {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      max-width: 360px;
+      max-width: 400px;
       margin: 0 auto 16px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       color: #6b6b6b;
     }
     .days {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      max-width: 360px;
+      max-width: 400px;
       margin: 0 auto;
-      gap: 10px;
-      font-size: 18px;
+      gap: 12px;
+      font-size: 20px;
     }
     .days .day-cell {
-      padding: 8px 4px;
+      padding: 10px 4px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -310,12 +256,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
+      width: 50px;
+      height: 50px;
     }
     .heart-number i {
       position: absolute;
-      font-size: 44px;
+      font-size: 50px;
       color: #e34234;
     }
     .heart-number span {
@@ -323,71 +269,69 @@
       z-index: 1;
       color: white;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 22px;
       font-family: 'Inter', sans-serif;
     }
     .calendar-date {
-      margin-top: 32px;
-      font-size: 30px;
+      margin-top: 36px;
+      font-size: 34px;
       font-weight: 400;
     }
     .footer-text {
-      margin-top: 24px;
-      font-size: 16px;
+      margin-top: 28px;
+      font-size: 18px;
       color: #4a4a4a;
     }
 
-    /* ===== МЕСТО ПРОВЕДЕНИЯ (белый фон, как в примере) ===== */
+    /* ===== МЕСТО ПРОВЕДЕНИЯ (белый фон) ===== */
     .location {
       background: #ffffff;
       color: #1a1a1a;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
     .location h2 {
-      font-size: 44px;
+      font-size: 48px;
       font-weight: 400;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       margin-bottom: 5px;
       color: #1a1a1a;
     }
     .location .sub {
-      font-size: 32px;
+      font-size: 36px;
       opacity: 0.7;
       margin-bottom: 30px;
       font-family: 'Cormorant Garamond', serif;
     }
     .info .main {
       font-weight: 500;
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 8px;
       color: #1a1a1a;
     }
     .address {
-      font-size: 16px;
+      font-size: 18px;
       color: #555;
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .btn-location {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 40px;
+      margin-top: 28px;
+      padding: 16px 44px;
       background: #1a1a1a;
       color: #fff;
       text-decoration: none;
-      font-size: 14px;
-      letter-spacing: 1px;
+      font-size: 16px;
+      letter-spacing: 1.5px;
       border-radius: 30px;
       transition: background 0.3s;
       border: none;
       cursor: pointer;
     }
-    .btn-location:hover {
-      background: #333;
-    }
+    .btn-location:hover { background: #333; }
     .location-photo {
-      margin-top: 40px;
-      max-width: 400px;
+      margin-top: 44px;
+      max-width: 340px; /* уменьшил ширину, чтобы фото было не слишком широким */
       margin-left: auto;
       margin-right: auto;
     }
@@ -396,6 +340,8 @@
       display: block;
       border-radius: 8px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      aspect-ratio: 4 / 3; /* прямоугольное */
+      object-fit: cover;
     }
 
     /* ===== ТАЙМИНГ (только сбор гостей) ===== */
@@ -404,9 +350,9 @@
       color: #fff;
       text-align: center;
     }
-    .timing h2 { font-size: 44px; font-weight: 400; }
+    .timing h2 { font-size: 48px; font-weight: 400; }
     .timing .sub {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 45px;
       opacity: 0.9;
     }
@@ -416,75 +362,75 @@
       align-items: center;
     }
     .item {
-      max-width: 340px;
+      max-width: 360px;
       margin: auto;
     }
-    .icon { font-size: 48px; margin-bottom: 12px; color: #fff; }
-    .time { font-size: 32px; font-weight: 400; margin-bottom: 8px; }
-    .timing .title { font-size: 22px; font-weight: 500; }
+    .icon { font-size: 52px; margin-bottom: 12px; color: #fff; }
+    .time { font-size: 36px; font-weight: 400; margin-bottom: 8px; }
+    .timing .title { font-size: 24px; font-weight: 500; }
 
-    /* ===== ДРЕСС-КОД (квадратики в два ряда) ===== */
+    /* ===== ДРЕСС-КОД (два ряда) ===== */
     .dresscode-section {
       background: #ffffff;
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 70px 20px 35px;
     }
     .dresscode-section h2 {
-      font-size: 40px;
+      font-size: 44px;
       margin-bottom: 12px;
       font-weight: 400;
     }
     .subtitle {
-      font-size: 26px;
+      font-size: 28px;
       color: #a0a0a0;
       margin-bottom: 28px;
     }
     .dresscode-section p {
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 19px;
+      line-height: 1.8;
       margin-bottom: 20px;
     }
     .color-squares {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      max-width: 340px;
+      gap: 14px;
+      max-width: 380px;
       margin: 30px auto 25px;
     }
     .color-square {
-      width: 45px;
-      height: 45px;
+      width: 52px;
+      height: 52px;
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       border: 1px solid rgba(0,0,0,0.04);
-      flex: 0 0 45px;
+      flex: 0 0 52px;
     }
 
     /* ===== БЛОК ПОЖЕЛАНИЙ ===== */
     .wishes-block {
       background: #ffffff;
       text-align: center;
-      padding: 30px 20px 60px;
+      padding: 35px 20px 70px;
     }
     .wishes-block h2 {
-      font-size: 36px;
+      font-size: 40px;
       margin-bottom: 15px;
       font-weight: 400;
     }
     .wishes-text {
-      font-size: 18px;
-      line-height: 1.6;
-      max-width: 500px;
+      font-size: 20px;
+      line-height: 1.7;
+      max-width: 540px;
       margin: 0 auto;
       color: #333;
     }
 
-    /* ===== ТАЙМЕР ===== */
+    /* ===== ТАЙМЕР (увеличен) ===== */
     .wedding-block {
       position: relative;
-      height: 85vh;
-      min-height: 500px;
+      height: 90vh;
+      min-height: 550px;
       background: url('молодые.jpeg') center/cover no-repeat;
       color: white;
       display: flex;
@@ -496,31 +442,31 @@
     .wedding-block .overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.45);
       z-index: 1;
     }
     .wedding-block .content {
       position: relative;
       z-index: 2;
       width: 100%;
-      padding: 50px 20px;
+      padding: 60px 20px 40px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
     }
     .wedding-block h1 {
-      margin-top: 30px;
-      font-size: clamp(32px, 7vw, 48px);
-      letter-spacing: 2px;
+      margin-top: 20px; /* поднял выше */
+      font-size: clamp(38px, 8vw, 56px);
+      letter-spacing: 3px;
       font-weight: 400;
     }
     .wedding-block .timer {
       width: 100%;
       display: flex;
       justify-content: center;
-      gap: 40px;
-      margin-bottom: 50px;
+      gap: 50px;
+      margin-bottom: 60px; /* опустил ниже */
       flex-wrap: wrap;
     }
     .wedding-block .timer div {
@@ -529,14 +475,14 @@
       padding: 0;
     }
     .wedding-block .timer span {
-      font-size: 56px;
+      font-size: 64px;
       font-weight: 400;
       display: block;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
     .wedding-block .timer small {
-      font-size: 14px;
-      letter-spacing: 2px;
+      font-size: 16px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       font-weight: 300;
     }
@@ -548,27 +494,27 @@
       text-align: center;
     }
     .contacts-content {
-      max-width: 450px;
+      max-width: 480px;
       margin: 0 auto;
     }
     .contacts-block h2 {
-      font-size: 44px;
+      font-size: 48px;
       margin-bottom: 30px;
       font-weight: 400;
     }
     .desc {
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 19px;
+      line-height: 1.8;
       margin-bottom: 30px;
       opacity: 0.9;
     }
     .person {
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 25px;
+      font-size: 19px;
+      line-height: 1.8;
+      margin-bottom: 28px;
     }
     .person span {
-      font-size: 15px;
+      font-size: 17px;
       opacity: 0.8;
     }
     .person a {
@@ -577,32 +523,30 @@
       border-bottom: 1px solid rgba(255,255,255,0.3);
       padding-bottom: 2px;
     }
-    .person a:hover {
-      border-bottom-color: #fff;
-    }
+    .person a:hover { border-bottom-color: #fff; }
     .divider {
       height: 1px;
       background: rgba(255,255,255,0.4);
       margin: 30px 0;
     }
     .invite {
-      font-size: 26px;
-      line-height: 1.5;
+      font-size: 28px;
+      line-height: 1.6;
       margin-bottom: 30px;
       font-weight: 400;
     }
     .love {
       font-style: italic;
       margin-bottom: 12px;
-      font-size: 18px;
+      font-size: 20px;
     }
     .names-sign {
-      font-size: 44px;
+      font-size: 48px;
       text-transform: capitalize;
       font-weight: 400;
     }
 
-    /* ===== RSVP (анкета) ===== */
+    /* ===== RSVP (анкета) — убрано слово Rsvp, улучшены радио/чекбоксы ===== */
     .rsvp {
       background: #b7a99a;
       color: #fff;
@@ -612,13 +556,16 @@
       max-width: 580px;
       margin: 0 auto;
     }
-    .rsvp h2 { font-size: 44px; margin-bottom: 10px; font-weight: 400; }
+    .rsvp h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
     .rsvp .subtitle {
-      font-size: 28px;
-      margin-bottom: 20px;
+      display: none; /* скрываем "Rsvp" */
     }
     .rsvp .note {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 32px;
       opacity: 0.9;
     }
@@ -627,7 +574,7 @@
     }
     .rsvp label {
       display: block;
-      font-size: 16px;
+      font-size: 17px;
       margin: 22px 0 8px;
       font-weight: 500;
     }
@@ -635,65 +582,115 @@
     .rsvp textarea {
       width: 100%;
       border: none;
-      border-bottom: 1px solid rgba(255,255,255,0.7);
+      border-bottom: 2px solid rgba(255,255,255,0.7);
       background: transparent;
-      padding: 10px 0;
+      padding: 12px 0;
       color: #fff;
       outline: none;
-      font-size: 16px;
+      font-size: 18px;
       font-family: 'Inter', sans-serif;
     }
     .rsvp textarea {
-      border: 1px solid rgba(255,255,255,0.5);
-      border-radius: 4px;
-      padding: 10px;
-      min-height: 60px;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      border-radius: 6px;
+      padding: 12px;
+      min-height: 70px;
       resize: vertical;
     }
     .rsvp input::placeholder,
     .rsvp textarea::placeholder {
       color: rgba(255,255,255,0.6);
     }
+
+    /* Улучшенные радио и чекбоксы */
     .radio-group {
       margin: 15px 0 10px;
     }
-    .radio-group label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 16px;
-      font-weight: normal;
-      margin: 12px 0;
-    }
-    .radio-group input[type="radio"] { accent-color: #fff; width: 18px; height: 18px; }
-    .checkbox-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      margin-top: 8px;
-    }
+    .radio-group label,
     .checkbox-group label {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 15px;
+      gap: 14px;
+      font-size: 17px;
       font-weight: normal;
-      margin: 0;
+      margin: 14px 0;
+      cursor: pointer;
+      position: relative;
+      padding-left: 0;
     }
+    .radio-group input[type="radio"],
     .checkbox-group input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      accent-color: #fff;
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
+    .radio-group label::before {
+      content: '';
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.8);
+      background: transparent;
+      flex-shrink: 0;
+      transition: 0.2s;
+    }
+    .radio-group label:has(input:checked)::before {
+      background: #fff;
+      border-color: #fff;
+      box-shadow: inset 0 0 0 5px #b7a99a;
+    }
+
+    .checkbox-group label::before {
+      content: '';
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.8);
+      background: transparent;
+      flex-shrink: 0;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .checkbox-group label:has(input:checked)::before {
+      background: #fff;
+      border-color: #fff;
+      content: '✓';
+      color: #b7a99a;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .checkbox-group label:has(input:checked)::before {
+      content: '✓';
+      color: #b7a99a;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 8px;
+    }
+    .checkbox-group label {
+      margin: 6px 0;
+    }
+
     .rsvp button {
       width: 100%;
-      margin-top: 40px;
-      padding: 14px;
-      border: 1px solid #fff;
+      margin-top: 44px;
+      padding: 16px;
+      border: 2px solid #fff;
       border-radius: 50px;
       background: transparent;
       color: #fff;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       cursor: pointer;
       transition: 0.25s;
@@ -702,85 +699,99 @@
 
     /* ----- АДАПТИВНОСТЬ ----- */
     @media (max-width: 768px) {
-      section { padding: 50px 16px; }
-      .hero .names { font-size: clamp(36px, 8vw, 60px); }
-      .hero .date { font-size: clamp(30px, 6vw, 50px); right: 4%; top: 32%; }
-      .frame img { width: 220px; height: 220px; }
-      .location h2 { font-size: 36px; }
-      .location .sub { font-size: 26px; }
-      .timing h2 { font-size: 36px; }
-      .timing .sub { font-size: 26px; }
-      .time { font-size: 28px; }
-      .timing .title { font-size: 20px; }
-      .dresscode-section h2 { font-size: 34px; }
-      .rsvp h2 { font-size: 36px; }
-      .rsvp .subtitle { font-size: 24px; }
-      .contacts-block h2 { font-size: 36px; }
-      .names-sign { font-size: 36px; }
-      .invite { font-size: 22px; }
-      .color-square { width: 40px; height: 40px; flex: 0 0 40px; }
-      .wedding-block .timer span { font-size: 44px; }
-      .wedding-block .timer { gap: 25px; }
-      .wishes-block h2 { font-size: 30px; }
-      .wishes-text { font-size: 16px; }
-      .calendar-date { font-size: 26px; }
-      .weekdays { max-width: 300px; font-size: 12px; }
-      .days { max-width: 300px; gap: 6px; font-size: 16px; }
-      .heart-number { width: 38px; height: 38px; }
-      .heart-number i { font-size: 38px; }
-      .heart-number span { font-size: 18px; }
-      .story-grid { max-width: 300px; gap: 10px; }
+      section { padding: 60px 16px; }
+      .hero .names { font-size: clamp(44px, 9vw, 70px); gap: 8px; }
+      .hero .date { font-size: clamp(36px, 7vw, 60px); right: 4%; top: 30%; }
+      .frame { max-width: 340px; }
+      .invite-block h2 { font-size: 36px; }
+      .invite-block p { font-size: 17px; }
+      .location h2 { font-size: 40px; }
+      .location .sub { font-size: 30px; }
+      .info .main { font-size: 20px; }
+      .address { font-size: 16px; }
+      .btn-location { padding: 14px 34px; font-size: 14px; }
+      .location-photo { max-width: 280px; }
+      .timing h2 { font-size: 40px; }
+      .timing .sub { font-size: 30px; }
+      .time { font-size: 30px; }
+      .timing .title { font-size: 22px; }
+      .dresscode-section h2 { font-size: 38px; }
+      .subtitle { font-size: 24px; }
+      .dresscode-section p { font-size: 17px; }
+      .color-square { width: 44px; height: 44px; flex: 0 0 44px; }
+      .color-squares { max-width: 320px; gap: 10px; }
+      .wishes-block h2 { font-size: 34px; }
+      .wishes-text { font-size: 18px; }
+      .rsvp h2 { font-size: 40px; }
+      .rsvp .note { font-size: 16px; }
+      .rsvp label { font-size: 16px; }
+      .rsvp input, .rsvp textarea { font-size: 16px; }
+      .radio-group label, .checkbox-group label { font-size: 16px; }
+      .rsvp button { font-size: 16px; padding: 14px; }
+      .contacts-block h2 { font-size: 40px; }
+      .person { font-size: 17px; }
+      .invite { font-size: 24px; }
+      .names-sign { font-size: 40px; }
+      .wedding-block .timer span { font-size: 48px; }
+      .wedding-block .timer { gap: 30px; }
+      .wedding-block h1 { font-size: clamp(32px, 6vw, 44px); }
+      .calendar-date { font-size: 30px; }
+      .weekdays { max-width: 340px; font-size: 14px; }
+      .days { max-width: 340px; gap: 8px; font-size: 18px; }
+      .heart-number { width: 44px; height: 44px; }
+      .heart-number i { font-size: 44px; }
+      .heart-number span { font-size: 20px; }
     }
 
     @media (max-width: 480px) {
-      section { padding: 40px 12px; }
-      .hero .names { font-size: clamp(28px, 6vw, 44px); bottom: 8%; }
-      .hero .date { font-size: clamp(24px, 5vw, 36px); right: 4%; top: 28%; }
-      .frame img { width: 180px; height: 180px; }
+      section { padding: 50px 12px; }
+      .hero .names { font-size: clamp(32px, 7vw, 48px); gap: 6px; flex-wrap: wrap; white-space: normal; }
+      .hero .date { font-size: clamp(28px, 6vw, 40px); right: 4%; top: 26%; }
+      .frame { max-width: 280px; }
       .invite-block h2 { font-size: 30px; }
       .invite-block p { font-size: 15px; }
-      .location h2 { font-size: 30px; }
-      .location .sub { font-size: 22px; }
+      .location h2 { font-size: 34px; }
+      .location .sub { font-size: 26px; }
       .info .main { font-size: 18px; }
       .address { font-size: 14px; }
-      .btn-location { padding: 12px 25px; font-size: 12px; }
-      .timing h2 { font-size: 30px; }
-      .timing .sub { font-size: 22px; }
-      .time { font-size: 24px; }
-      .timing .title { font-size: 18px; }
-      .dresscode-section h2 { font-size: 28px; }
+      .btn-location { padding: 12px 24px; font-size: 13px; }
+      .location-photo { max-width: 240px; }
+      .timing h2 { font-size: 34px; }
+      .timing .sub { font-size: 26px; }
+      .time { font-size: 26px; }
+      .timing .title { font-size: 20px; }
+      .icon { font-size: 44px; }
+      .dresscode-section h2 { font-size: 32px; }
       .subtitle { font-size: 22px; }
       .dresscode-section p { font-size: 15px; }
-      .color-square { width: 36px; height: 36px; flex: 0 0 36px; gap: 8px; }
-      .color-squares { max-width: 280px; gap: 8px; }
-      .wishes-block h2 { font-size: 26px; }
-      .wishes-text { font-size: 15px; }
-      .rsvp h2 { font-size: 30px; }
-      .rsvp .subtitle { font-size: 22px; }
+      .color-square { width: 38px; height: 38px; flex: 0 0 38px; }
+      .color-squares { max-width: 270px; gap: 8px; }
+      .wishes-block h2 { font-size: 30px; }
+      .wishes-text { font-size: 16px; }
+      .rsvp h2 { font-size: 34px; }
       .rsvp .note { font-size: 14px; }
-      .rsvp label { font-size: 14px; }
-      .rsvp input, .rsvp textarea { font-size: 14px; }
-      .radio-group label { font-size: 14px; }
-      .checkbox-group label { font-size: 13px; }
-      .rsvp button { font-size: 14px; padding: 12px; }
-      .contacts-block h2 { font-size: 30px; }
+      .rsvp label { font-size: 15px; }
+      .rsvp input, .rsvp textarea { font-size: 15px; }
+      .radio-group label, .checkbox-group label { font-size: 15px; gap: 10px; }
+      .radio-group label::before, .checkbox-group label::before { width: 20px; height: 20px; }
+      .rsvp button { font-size: 15px; padding: 12px; }
+      .contacts-block h2 { font-size: 34px; }
       .person { font-size: 15px; }
-      .invite { font-size: 20px; }
-      .names-sign { font-size: 30px; }
-      .wedding-block .timer span { font-size: 32px; }
-      .wedding-block .timer { gap: 12px; }
-      .wedding-block h1 { font-size: 22px; }
+      .invite { font-size: 22px; }
+      .names-sign { font-size: 34px; }
+      .wedding-block .timer span { font-size: 38px; }
+      .wedding-block .timer { gap: 18px; margin-bottom: 40px; }
+      .wedding-block h1 { font-size: clamp(26px, 5vw, 34px); margin-top: 10px; }
       .timer div { min-width: 45px; }
-      .calendar-date { font-size: 22px; }
-      .weekdays { max-width: 260px; font-size: 11px; }
-      .days { max-width: 260px; gap: 4px; font-size: 14px; }
-      .heart-number { width: 34px; height: 34px; }
-      .heart-number i { font-size: 34px; }
-      .heart-number span { font-size: 16px; }
-      .month { font-size: 24px; }
-      .footer-text { font-size: 14px; }
-      .checkbox-group { flex-direction: column; gap: 6px; }
-      .story-grid { max-width: 260px; gap: 8px; }
+      .calendar-date { font-size: 26px; }
+      .weekdays { max-width: 280px; font-size: 12px; }
+      .days { max-width: 280px; gap: 6px; font-size: 16px; }
+      .heart-number { width: 38px; height: 38px; }
+      .heart-number i { font-size: 38px; }
+      .heart-number span { font-size: 18px; }
+      .month { font-size: 28px; }
+      .footer-text { font-size: 15px; }
+      .checkbox-group { flex-direction: column; gap: 4px; }
     }
   </style>
 </head>
@@ -795,73 +806,60 @@
 <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
 
 <!-- ПЕРВЫЙ ЭКРАН -->
-<section class="hero fade-section">
+<section class="hero">
   <img src="молодые.jpeg" alt="Максим и Виктория">
   <div class="hero-overlay"></div>
   <div class="date">14<br>11<br>26</div>
   <div class="names">
-    Максим<br>
-    <span class="amp">&</span><br>
-    Виктория
+    <span>Максим</span>
+    <span class="amp">&</span>
+    <span>Виктория</span>
   </div>
 </section>
 
 <!-- МУЗЫКА -->
-<div class="music fade-section">
-  <button id="musicToggleBtn"><i class="fas fa-play"></i></button>
-  <div class="music-text">ВКЛЮЧИТЬ / ВЫКЛЮЧИТЬ МУЗЫКУ</div>
+<div class="music">
+  <button id="musicToggleBtn" class="fade-item"><i class="fas fa-play"></i></button>
+  <div class="music-text fade-item">ВКЛЮЧИТЬ / ВЫКЛЮЧИТЬ МУЗЫКУ</div>
   <audio id="weddingAudio" src="music.mp3" loop preload="auto"></audio>
 </div>
 
-<!-- НАША ИСТОРИЯ (4 фото) -->
-<section class="story fade-section">
-  <div class="story-grid">
-    <img src="молодые2.jpeg" alt="История 1">
-    <img src="молодые3.jpeg" alt="История 2">
-    <img src="молодые4.jpeg" alt="История 3">
-    <img src="молодые5.jpeg" alt="История 4">
-  </div>
-  <div class="love">M + V <span class="heart-icon">♡</span></div>
-  <div class="title">Наша история</div>
-  <div class="text">Каждый кадр — это частичка нашей любви. Спасибо, что вы с нами!</div>
-</section>
-
 <!-- ПРИГЛАШЕНИЕ -->
-<section class="invite-block fade-section">
-  <div class="frame"><img src="молодые5.jpeg" alt="Пара"></div>
-  <h2>РОДНЫЕ И ЛЮБИМЫЕ!</h2>
-  <p>Хотим, чтобы вы разделили с нами радость и были на торжестве в самый лучший и трогательный день в нашей жизни!</p>
+<section class="invite-block">
+  <div class="frame fade-item"><img src="молодые5.jpeg" alt="Пара"></div>
+  <h2 class="fade-item">РОДНЫЕ И ЛЮБИМЫЕ!</h2>
+  <p class="fade-item">Хотим, чтобы вы разделили с нами радость и были на торжестве в самый лучший и трогательный день в нашей жизни!</p>
 </section>
 
 <!-- КАЛЕНДАРЬ -->
-<section class="calendar-block fade-section">
-  <div class="month">— НОЯБРЬ 2026 —</div>
-  <div class="weekdays" id="weekdays"></div>
-  <div class="days" id="calendarGrid"></div>
-  <div class="calendar-date">14.11.2026</div>
-  <p class="footer-text">Мы будем безумно рады видеть вас в кругу наших гостей</p>
+<section class="calendar-block">
+  <div class="month fade-item">— НОЯБРЬ 2026 —</div>
+  <div class="weekdays fade-item" id="weekdays"></div>
+  <div class="days fade-item" id="calendarGrid"></div>
+  <div class="calendar-date fade-item">14.11.2026</div>
+  <p class="footer-text fade-item">Мы будем безумно рады видеть вас в кругу наших гостей</p>
 </section>
 
-<!-- МЕСТО ПРОВЕДЕНИЯ (белый фон, как в примере) -->
-<section class="location fade-section">
-  <h2>МЕСТО</h2>
-  <div class="sub">проведения</div>
-  <div class="info">
+<!-- МЕСТО ПРОВЕДЕНИЯ (белый фон) -->
+<section class="location">
+  <h2 class="fade-item">МЕСТО</h2>
+  <div class="sub fade-item">проведения</div>
+  <div class="info fade-item">
     <p class="main">Ресторан «Зелёный Луг»</p>
     <p class="address">Минск, улица Карбышева, 25</p>
   </div>
-  <a href="https://yandex.by/maps/org/zeleny_lug/106232067261/?ll=27.644872%2C53.947669&z=15" target="_blank" class="btn-location">Открыть карту</a>
-  <div class="location-photo">
+  <a href="https://yandex.by/maps/org/zeleny_lug/106232067261/?ll=27.644872%2C53.947669&z=15" target="_blank" class="btn-location fade-item">Открыть карту</a>
+  <div class="location-photo fade-item">
     <img src="локация1.jpeg" alt="Ресторан Зелёный Луг">
   </div>
 </section>
 
 <!-- ТАЙМИНГ -->
-<section class="timing fade-section">
-  <h2>ТАЙМИНГ ДНЯ</h2>
-  <div class="sub">Timing</div>
+<section class="timing">
+  <h2 class="fade-item">ТАЙМИНГ ДНЯ</h2>
+  <div class="sub fade-item">Timing</div>
   <div class="timeline">
-    <div class="item">
+    <div class="item fade-item">
       <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
       <div class="time">14:50</div>
       <div class="title">Сбор гостей</div>
@@ -869,12 +867,12 @@
   </div>
 </section>
 
-<!-- ДРЕСС-КОД (два ряда) -->
-<section class="dresscode-section fade-section">
-  <h2>ДРЕСС - КОД</h2>
-  <div class="subtitle">dress-code</div>
-  <p>Мы будем рады, если вы поддержите цветовую гамму нашего торжества в своих образах.</p>
-  <div class="color-squares">
+<!-- ДРЕСС-КОД -->
+<section class="dresscode-section">
+  <h2 class="fade-item">ДРЕСС - КОД</h2>
+  <div class="subtitle fade-item">dress-code</div>
+  <p class="fade-item">Мы будем рады, если вы поддержите цветовую гамму нашего торжества в своих образах.</p>
+  <div class="color-squares fade-item">
     <div class="color-square" style="background:#d7b4b0;"></div>
     <div class="color-square" style="background:#de99ac;"></div>
     <div class="color-square" style="background:#f4e397;"></div>
@@ -887,21 +885,21 @@
     <div class="color-square" style="background:#929592;"></div>
     <div class="color-square" style="background:#3f2520;"></div>
   </div>
-  <p style="margin-top:10px;">Захватите с собой удобную обувь для танцев!</p>
+  <p class="fade-item" style="margin-top:12px;">Захватите с собой удобную обувь для танцев!</p>
 </section>
 
 <!-- ПОЖЕЛАНИЯ -->
-<section class="wishes-block fade-section">
-  <h2>Пожелания</h2>
-  <p class="wishes-text">Главное для нас – ваше внимание, а радость доставит любой подарок в конверте!</p>
+<section class="wishes-block">
+  <h2 class="fade-item">Пожелания</h2>
+  <p class="wishes-text fade-item">Главное для нас – ваше внимание, а радость доставит любой подарок в конверте!</p>
 </section>
 
-<!-- ТАЙМЕР -->
-<section class="wedding-block fade-section">
+<!-- ТАЙМЕР (увеличен, заголовок выше, отсчёт ниже) -->
+<section class="wedding-block">
   <div class="overlay"></div>
   <div class="content">
-    <h1>ДО НАШЕЙ СВАДЬБЫ<br>ОСТАЛОСЬ:</h1>
-    <div class="timer">
+    <h1 class="fade-item">ДО НАШЕЙ СВАДЬБЫ<br>ОСТАЛОСЬ:</h1>
+    <div class="timer fade-item">
       <div><span id="weddingDays">0</span><small>ДНЕЙ</small></div>
       <div><span id="weddingHours">0</span><small>ЧАСОВ</small></div>
       <div><span id="weddingMinutes">0</span><small>МИНУТ</small></div>
@@ -910,66 +908,75 @@
   </div>
 </section>
 
-<!-- АНКЕТА -->
-<section class="rsvp fade-section">
+<!-- АНКЕТА (без Rsvp) -->
+<section class="rsvp">
   <div class="container">
-    <h2>АНКЕТА ГОСТЯ</h2>
-    <div class="subtitle">Rsvp</div>
-    <p class="note">пожалуйста, подтвердите свое присутствие до <strong>14.10.2026</strong></p>
+    <h2 class="fade-item">АНКЕТА ГОСТЯ</h2>
+    <p class="note fade-item">пожалуйста, подтвердите свое присутствие до <strong>14.10.2026</strong></p>
     <form id="rsvpForm">
-      <label>Ваше имя и фамилия</label>
-      <input type="text" placeholder="Имя и фамилия" required>
-
-      <label>Сможете ли Вы присутствовать?</label>
-      <div class="radio-group">
-        <label><input type="radio" name="attend" value="yes" required> Да, смогу</label>
-        <label><input type="radio" name="attend" value="no"> Нет, не смогу</label>
-        <label><input type="radio" name="attend" value="plus"> Да, но с +1</label>
+      <div class="fade-item">
+        <label>Ваше имя и фамилия</label>
+        <input type="text" placeholder="Имя и фамилия" required>
       </div>
 
-      <label>Список сопровождающих лиц (если будете не один)</label>
-      <input type="text" placeholder="Имена всех, кто придёт с вами">
-
-      <label>Предпочтения в напитках (можно выбрать несколько)</label>
-      <div class="checkbox-group">
-        <label><input type="checkbox" value="Красное вино"> Красное вино</label>
-        <label><input type="checkbox" value="Белое вино"> Белое вино</label>
-        <label><input type="checkbox" value="Игристое"> Игристое</label>
-        <label><input type="checkbox" value="Виски"> Виски</label>
-        <label><input type="checkbox" value="Водка"> Водка</label>
-        <label><input type="checkbox" value="Коньяк"> Коньяк</label>
-        <label><input type="checkbox" value="Безалкогольное"> Безалкогольное</label>
+      <div class="fade-item">
+        <label>Сможете ли Вы присутствовать?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="attend" value="yes" required> Да, смогу</label>
+          <label><input type="radio" name="attend" value="no"> Нет, не смогу</label>
+          <label><input type="radio" name="attend" value="plus"> Да, но с +1</label>
+        </div>
       </div>
 
-      <label>Особые предпочтения, аллергии или диетические ограничения</label>
-      <textarea placeholder="Например: аллергия на орехи, вегетарианство и т.п."></textarea>
+      <div class="fade-item">
+        <label>Список сопровождающих лиц (если будете не один)</label>
+        <input type="text" placeholder="Имена всех, кто придёт с вами">
+      </div>
 
-      <button type="submit">Отправить</button>
+      <div class="fade-item">
+        <label>Предпочтения в напитках (можно выбрать несколько)</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="Красное вино"> Красное вино</label>
+          <label><input type="checkbox" value="Белое вино"> Белое вино</label>
+          <label><input type="checkbox" value="Игристое"> Игристое</label>
+          <label><input type="checkbox" value="Виски"> Виски</label>
+          <label><input type="checkbox" value="Водка"> Водка</label>
+          <label><input type="checkbox" value="Коньяк"> Коньяк</label>
+          <label><input type="checkbox" value="Безалкогольное"> Безалкогольное</label>
+        </div>
+      </div>
+
+      <div class="fade-item">
+        <label>Особые предпочтения, аллергии или диетические ограничения</label>
+        <textarea placeholder="Например: аллергия на орехи, вегетарианство и т.п."></textarea>
+      </div>
+
+      <button type="submit" class="fade-item">Отправить</button>
     </form>
   </div>
 </section>
 
 <!-- КОНТАКТЫ -->
-<section class="contacts-block fade-section">
+<section class="contacts-block">
   <div class="contacts-content">
-    <h2>КОНТАКТЫ</h2>
-    <p class="desc">По всем вопросам вы можете обратиться к нам напрямую:</p>
+    <h2 class="fade-item">КОНТАКТЫ</h2>
+    <p class="desc fade-item">По всем вопросам вы можете обратиться к нам напрямую:</p>
 
-    <div class="person">
+    <div class="person fade-item">
       <strong>Максим</strong><br>
       <span>тел: <a href="tel:+375447540777">+375 44 754-07-77</a></span><br>
       <span>Telegram: <a href="https://t.me/maaksim1" target="_blank">@maaksim1</a></span>
     </div>
-    <div class="person">
+    <div class="person fade-item">
       <strong>Виктория</strong><br>
       <span>тел: <a href="tel:+375299237949">+375 29 923-79-49</a></span><br>
       <span>Telegram: <a href="https://t.me/meoweer1" target="_blank">@meoweer1</a></span>
     </div>
 
-    <div class="divider"></div>
-    <p class="invite">С НЕТЕРПЕНИЕМ ЖДЕМ<br>ВСТРЕЧИ С ВАМИ<br>НА НАШЕЙ СВАДЬБЕ!</p>
-    <p class="love">С любовью,</p>
-    <p class="names-sign">Максим & Виктория</p>
+    <div class="divider fade-item"></div>
+    <p class="invite fade-item">С НЕТЕРПЕНИЕМ ЖДЕМ<br>ВСТРЕЧИ С ВАМИ<br>НА НАШЕЙ СВАДЬБЕ!</p>
+    <p class="love fade-item">С любовью,</p>
+    <p class="names-sign fade-item">Максим & Виктория</p>
   </div>
 </section>
 
@@ -1070,19 +1077,18 @@
   setInterval(updateWeddingTimer, 1000);
   updateWeddingTimer();
 
-  // 5. АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ (Intersection Observer)
-  const fadeSections = document.querySelectorAll('.fade-section');
+  // 5. АНИМАЦИЯ ПОЯВЛЕНИЯ (только для элементов с классом .fade-item)
+  const fadeItems = document.querySelectorAll('.fade-item');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Можно отключить наблюдение после появления
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
 
-  fadeSections.forEach(section => observer.observe(section));
+  fadeItems.forEach(item => observer.observe(item));
 
   // 6. RSVP
   const rsvpForm = document.getElementById('rsvpForm');
