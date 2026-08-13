@@ -84,7 +84,7 @@
     h1, h2, h3, .block-1 .name, .block-1 .date-top, .location h2, .timing h2,
     .dresscode-section h2, .rsvp h2, .wedding-block h1,
     .contacts-block h2, .invite, .names-sign, .music-text, .time, .sub, .subtitle,
-    .timer span, .calendar-date, .wishes-block h2, .block-1 .amp {
+    .timer span, .calendar-date, .wishes-block h2, .block-1 .amp, .month {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
       letter-spacing: 1.5px;
@@ -114,6 +114,12 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* ===== КВАДРАТНЫЕ ФОТО — появляются одно за другим ===== */
+    .story-grid .fade-item:nth-child(1) { transition-delay: 0.05s; }
+    .story-grid .fade-item:nth-child(2) { transition-delay: 0.25s; }
+    .story-grid .fade-item:nth-child(3) { transition-delay: 0.45s; }
+    .story-grid .fade-item:nth-child(4) { transition-delay: 0.65s; }
 
     /* ===== ПЕРВЫЙ БЛОК (компактный, цветное фото) ===== */
     .block-1 {
@@ -148,7 +154,6 @@
       width: 100%;
       display: block;
       border-radius: 0;
-      /* цветное фото */
     }
     .block-1 .names-section {
       display: flex;
@@ -224,17 +229,18 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
 
-    /* ===== ПРИГЛАШЕНИЕ (заголовок на одной строке) ===== */
+    /* ===== ПРИГЛАШЕНИЕ (заголовок строго на одной строке) ===== */
     .invite-block {
       background: #ffffff;
       text-align: center;
       padding: 30px 20px 50px;
     }
     .invite-block h2 {
-      font-size: 44px;
+      font-size: clamp(28px, 6vw, 44px);
       margin-bottom: 16px;
       font-weight: 400;
       white-space: nowrap;
+      letter-spacing: 2px;
     }
     .invite-block p {
       max-width: 600px;
@@ -310,65 +316,77 @@
       color: #4a4a4a;
     }
 
-    /* ===== МЕСТО ПРОВЕДЕНИЯ (заголовок на одной строке) ===== */
+    /* ===== МЕСТО ПРОВЕДЕНИЯ (как в шаблоне) ===== */
     .location {
-      background: #ffffff;
-      color: #1a1a1a;
+      background: #b7a99a;
+      color: #fff;
       text-align: center;
       padding: 50px 20px;
     }
     .location h2 {
       font-size: 44px;
+      line-height: 1.2;
       font-weight: 400;
       letter-spacing: 3px;
-      margin-bottom: 30px;
-      color: #1a1a1a;
-      white-space: nowrap;
+      margin-bottom: 5px;
     }
-    /* убрали .sub */
+    .location .sub {
+      font-size: 28px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 1.5px;
+    }
     .info .main {
       font-weight: 500;
-      font-size: 22px;
       margin-bottom: 8px;
-      color: #1a1a1a;
+      font-size: 22px;
+      color: #fff;
     }
     .address {
       font-size: 18px;
-      color: #555;
-      line-height: 1.6;
+      opacity: 0.9;
+      color: #fff;
     }
     .btn-location {
       display: inline-block;
       margin-top: 28px;
-      padding: 16px 44px;
-      background: #1a1a1a;
-      color: #ffffff;
+      padding: 14px 40px;
+      border: 1px solid #fff;
+      color: #fff;
       text-decoration: none;
       font-size: 16px;
       letter-spacing: 1.5px;
-      border-radius: 30px;
       transition: 0.3s;
-      border: none;
+      background: transparent;
       cursor: pointer;
     }
     .btn-location:hover {
-      background: #333;
+      background: #fff;
+      color: #b7a99a;
     }
-    .location-photo {
+    .photos-loc {
       margin-top: 40px;
-      max-width: 340px;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      flex-wrap: wrap;
     }
-    .location-photo img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 4 / 3;
+    .polaroid-card {
+      background: #fff;
+      padding: 6px 6px 12px 6px;
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+      transform: rotate(var(--rot, 0deg));
+      max-width: 160px;
+    }
+    .polaroid-card img {
+      width: 140px;
+      height: 140px;
       object-fit: cover;
+      display: block;
     }
+    .p1-wrap { --rot: -8deg; position: relative; top: -10px; }
+    .p2-wrap { --rot: 8deg; position: relative; top: 15px; }
 
     /* ===== ТАЙМИНГ (только сбор гостей) ===== */
     .timing {
@@ -440,7 +458,7 @@
       flex: 0 0 52px;
     }
 
-    /* ===== ПОЖЕЛАНИЯ (стиль как у дресс-кода) ===== */
+    /* ===== ПОЖЕЛАНИЯ (заголовок капсом) ===== */
     .wishes-block {
       background: #ffffff;
       text-align: center;
@@ -450,6 +468,7 @@
       font-size: 44px;
       margin-bottom: 10px;
       font-weight: 400;
+      text-transform: uppercase;
     }
     .wishes-block .subtitle {
       font-size: 28px;
@@ -466,11 +485,11 @@
       color: #333;
     }
 
-    /* ===== ТАЙМЕР (адаптивный) ===== */
+    /* ===== ТАЙМЕР (как в эталонном коде) ===== */
     .wedding-block {
       position: relative;
-      height: 90vh;
-      min-height: 550px;
+      height: 85vh;
+      min-height: 500px;
       background: url('молодые.jpeg') center/cover no-repeat;
       color: white;
       display: flex;
@@ -482,31 +501,31 @@
     .wedding-block .overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 0.4);
       z-index: 1;
     }
     .wedding-block .content {
       position: relative;
       z-index: 2;
       width: 100%;
-      padding: 60px 20px 40px;
+      padding: 50px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
     }
     .wedding-block h1 {
-      margin-top: 20px;
-      font-size: clamp(40px, 8vw, 56px);
-      letter-spacing: 3px;
+      margin-top: 30px;
+      font-size: clamp(32px, 7vw, 48px);
+      letter-spacing: 2px;
       font-weight: 400;
     }
     .wedding-block .timer {
       width: 100%;
       display: flex;
       justify-content: center;
-      gap: 50px;
-      margin-bottom: 60px;
+      gap: 40px;
+      margin-bottom: 50px;
       flex-wrap: wrap;
     }
     .wedding-block .timer div {
@@ -515,14 +534,14 @@
       padding: 0;
     }
     .wedding-block .timer span {
-      font-size: 64px;
+      font-size: 56px;
       font-weight: 400;
       display: block;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
     .wedding-block .timer small {
-      font-size: 16px;
-      letter-spacing: 3px;
+      font-size: 14px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 300;
     }
@@ -732,7 +751,7 @@
     }
     .rsvp button:hover { background: #fff; color: #b7a99a; }
 
-    /* ----- АДАПТИВНОСТЬ (таймер и заголовки) ----- */
+    /* ----- АДАПТИВНОСТЬ ----- */
     @media (max-width: 768px) {
       section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
         padding: 40px 16px;
@@ -744,12 +763,16 @@
       .block-1 .date-top { font-size: 16px; margin-bottom: 10px; }
       .block-1 .audio-btn { width: 44px; height: 44px; font-size: 18px; }
 
-      .invite-block h2 { font-size: 38px; white-space: normal; }
-      .location h2 { font-size: 38px; white-space: normal; }
+      .invite-block h2 { font-size: clamp(24px, 4.5vw, 32px); white-space: nowrap; }
+
+      .location h2 { font-size: 38px; }
+      .location .sub { font-size: 26px; }
       .info .main { font-size: 20px; }
       .address { font-size: 16px; }
       .btn-location { padding: 14px 34px; font-size: 14px; }
-      .location-photo { max-width: 280px; }
+      .photos-loc { gap: 20px; }
+      .polaroid-card img { width: 120px; height: 120px; }
+      .polaroid-card { max-width: 140px; }
 
       .timing h2 { font-size: 38px; }
       .timing .sub { font-size: 26px; }
@@ -778,7 +801,6 @@
       .invite { font-size: 24px; }
       .names-sign { font-size: 40px; }
 
-      /* Адаптивный таймер */
       .wedding-block .timer span { font-size: 48px; }
       .wedding-block .timer { gap: 30px; }
       .wedding-block h1 { font-size: clamp(32px, 6vw, 44px); }
@@ -804,13 +826,19 @@
       .block-1 .audio-btn { width: 40px; height: 40px; font-size: 16px; }
       .block-1 .player-label { font-size: 9px; }
 
-      .invite-block h2 { font-size: 32px; white-space: normal; }
+      .invite-block h2 { font-size: clamp(20px, 4.5vw, 26px); white-space: nowrap; letter-spacing: 1px; }
       .invite-block p { font-size: 15px; }
-      .location h2 { font-size: 32px; white-space: normal; }
+
+      .location h2 { font-size: 32px; }
+      .location .sub { font-size: 24px; }
       .info .main { font-size: 18px; }
       .address { font-size: 14px; }
       .btn-location { padding: 12px 24px; font-size: 13px; }
-      .location-photo { max-width: 240px; }
+      .photos-loc { gap: 15px; }
+      .polaroid-card img { width: 100px; height: 100px; }
+      .polaroid-card { max-width: 120px; padding: 4px 4px 10px 4px; }
+      .p1-wrap { top: -5px; }
+      .p2-wrap { top: 8px; }
 
       .timing h2 { font-size: 32px; }
       .timing .sub { font-size: 24px; }
@@ -841,7 +869,6 @@
       .invite { font-size: 22px; }
       .names-sign { font-size: 34px; }
 
-      /* Таймер на маленьких экранах — сильно уменьшаем */
       .wedding-block .timer span { font-size: 32px; }
       .wedding-block .timer { gap: 15px; margin-bottom: 40px; }
       .wedding-block h1 { font-size: clamp(24px, 5vw, 30px); margin-top: 10px; }
@@ -891,17 +918,17 @@
   </div>
 </section>
 
-<!-- 4 КВАДРАТНЫХ ФОТО -->
+<!-- 4 КВАДРАТНЫХ ФОТО (появляются по очереди) -->
 <section class="story-photos">
-  <div class="story-grid fade-item">
-    <img src="молодые2.jpeg" alt="Фото 1">
-    <img src="молодые3.jpeg" alt="Фото 2">
-    <img src="молодые4.jpeg" alt="Фото 3">
-    <img src="молодые5.jpeg" alt="Фото 4">
+  <div class="story-grid">
+    <img src="молодые2.jpeg" alt="Фото 1" class="fade-item">
+    <img src="молодые3.jpeg" alt="Фото 2" class="fade-item">
+    <img src="молодые4.jpeg" alt="Фото 3" class="fade-item">
+    <img src="молодые5.jpeg" alt="Фото 4" class="fade-item">
   </div>
 </section>
 
-<!-- ПРИГЛАШЕНИЕ (заголовок на одной строке) -->
+<!-- ПРИГЛАШЕНИЕ (заголовок строго на одной строке) -->
 <section class="invite-block">
   <h2 class="fade-item">РОДНЫЕ И ЛЮБИМЫЕ!</h2>
   <p class="fade-item">Хотим, чтобы вы разделили с нами радость и были на торжестве в самый лучший и трогательный день в нашей жизни!</p>
@@ -916,16 +943,18 @@
   <p class="footer-text fade-item">Мы будем безумно рады видеть вас в кругу наших гостей</p>
 </section>
 
-<!-- МЕСТО ПРОВЕДЕНИЯ (заголовок на одной строке) -->
+<!-- МЕСТО ПРОВЕДЕНИЯ -->
 <section class="location">
-  <h2 class="fade-item">МЕСТО ПРОВЕДЕНИЯ</h2>
+  <h2 class="fade-item">МЕСТО<br>ПРОВЕДЕНИЯ</h2>
+  <div class="sub fade-item">location</div>
   <div class="info fade-item">
     <p class="main">Ресторан «Зелёный Луг»</p>
     <p class="address">Минск, улица Карбышева, 25</p>
   </div>
-  <a href="https://yandex.by/maps/org/zeleny_lug/106232067261/?ll=27.644872%2C53.947669&z=15" target="_blank" class="btn-location fade-item">Открыть карту</a>
-  <div class="location-photo fade-item">
-    <img src="локация1.jpeg" alt="Ресторан Зелёный Луг">
+  <a href="https://yandex.by/maps/org/zeleny_lug/106232067261/?ll=27.644872%2C53.947669&z=15" target="_blank" class="btn-location fade-item">ПОКАЗАТЬ НА КАРТЕ</a>
+  <div class="photos-loc fade-item">
+    <div class="polaroid-card p1-wrap"><img src="локация1.jpeg" alt="Локация 1"></div>
+    <div class="polaroid-card p2-wrap"><img src="локация1.jpeg" alt="Локация 2"></div>
   </div>
 </section>
 
@@ -963,14 +992,14 @@
   <p class="fade-item" style="margin-top:10px;">Захватите с собой удобную обувь для танцев!</p>
 </section>
 
-<!-- ПОЖЕЛАНИЯ (стиль как у дресс-кода) -->
+<!-- ПОЖЕЛАНИЯ (заголовок капсом) -->
 <section class="wishes-block">
-  <h2 class="fade-item">Пожелания</h2>
+  <h2 class="fade-item">ПОЖЕЛАНИЯ</h2>
   <div class="subtitle fade-item">wishes</div>
   <p class="wishes-text fade-item">Главное для нас – ваше внимание, а радость доставит любой подарок в конверте!</p>
 </section>
 
-<!-- ТАЙМЕР -->
+<!-- ТАЙМЕР (как в эталонном коде) -->
 <section class="wedding-block">
   <div class="overlay"></div>
   <div class="content">
@@ -1174,7 +1203,7 @@
   setInterval(updateWeddingTimer, 1000);
   updateWeddingTimer();
 
-  // 5. АНИМАЦИЯ ПОЯВЛЕНИЯ (плавная для всей страницы)
+  // 5. АНИМАЦИЯ ПОЯВЛЕНИЯ
   const fadeItems = document.querySelectorAll('.fade-item');
   const photoWrapper = document.getElementById('mainPhotoWrapper');
 
@@ -1183,7 +1212,6 @@
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
-        // Для фото-wrapper отдельно
         if (entry.target.classList.contains('photo-wrapper') && photoWrapper) {
           photoWrapper.classList.add('visible');
         }
