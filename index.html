@@ -141,10 +141,12 @@
       line-height: 1.2;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
       font-weight: 400;
-      white-space: nowrap;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 16px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
     }
     .names .amp {
       font-size: 0.7em;
@@ -153,7 +155,7 @@
     .date {
       position: absolute;
       right: 6%;
-      top: 32%;
+      top: 38%;
       color: #fff;
       text-align: right;
       font-size: clamp(48px, 9vw, 110px);
@@ -185,7 +187,7 @@
       color: #2c2c2c;
     }
 
-    /* ===== 4 ФОТО КВАДРАТОМ (без заголовка) ===== */
+    /* ===== 4 КВАДРАТНЫХ ФОТО (увеличены) ===== */
     .story-photos {
       background: #ffffff;
       text-align: center;
@@ -194,8 +196,8 @@
     .story-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      max-width: 400px;
+      gap: 16px;
+      max-width: 480px;
       margin: 0 auto;
     }
     .story-grid img {
@@ -206,29 +208,14 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
 
-    /* ===== ПРИГЛАШЕНИЕ ===== */
+    /* ===== ПРИГЛАШЕНИЕ (без фото) ===== */
     .invite-block {
       background: #ffffff;
       text-align: center;
-      padding-top: 20px;
-    }
-    .frame {
-      background: #fff;
-      padding: 12px 12px 20px 12px;
-      display: inline-block;
-      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-      width: 92%;
-      max-width: 560px; /* сильно увеличил ширину */
-    }
-    .frame img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      display: block;
+      padding: 40px 20px 60px;
     }
     .invite-block h2 {
-      font-size: 42px;
+      font-size: 44px; /* единый размер */
       margin-bottom: 20px;
       font-weight: 400;
     }
@@ -305,7 +292,7 @@
       color: #4a4a4a;
     }
 
-    /* ===== МЕСТО ПРОВЕДЕНИЯ (оформлен как Тайминг — тёмный фон) ===== */
+    /* ===== МЕСТО ПРОВЕДЕНИЯ (оформлен как Тайминг) ===== */
     .location {
       background: #b7a99a;
       color: #ffffff;
@@ -313,14 +300,14 @@
       padding: 70px 20px;
     }
     .location h2 {
-      font-size: 48px;
+      font-size: 44px; /* единый размер */
       font-weight: 400;
       letter-spacing: 3px;
       margin-bottom: 5px;
       color: #ffffff;
     }
     .location .sub {
-      font-size: 36px;
+      font-size: 28px; /* единый подзаголовок */
       opacity: 0.9;
       margin-bottom: 30px;
       font-family: 'Cormorant Garamond', serif;
@@ -376,9 +363,12 @@
       color: #fff;
       text-align: center;
     }
-    .timing h2 { font-size: 48px; font-weight: 400; }
+    .timing h2 {
+      font-size: 44px; /* единый размер */
+      font-weight: 400;
+    }
     .timing .sub {
-      font-size: 36px;
+      font-size: 28px; /* единый подзаголовок */
       margin-bottom: 45px;
       opacity: 0.9;
     }
@@ -402,14 +392,16 @@
       padding: 70px 20px 35px;
     }
     .dresscode-section h2 {
-      font-size: 44px;
+      font-size: 44px; /* единый размер */
       margin-bottom: 12px;
       font-weight: 400;
     }
-    .subtitle {
-      font-size: 28px;
+    .dresscode-section .subtitle {
+      font-size: 28px; /* единый подзаголовок */
       color: #a0a0a0;
       margin-bottom: 28px;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 1.5px;
     }
     .dresscode-section p {
       font-size: 19px;
@@ -440,7 +432,7 @@
       padding: 35px 20px 70px;
     }
     .wishes-block h2 {
-      font-size: 40px;
+      font-size: 44px; /* единый размер */
       margin-bottom: 15px;
       font-weight: 400;
     }
@@ -452,7 +444,7 @@
       color: #333;
     }
 
-    /* ===== ТАЙМЕР (увеличен) ===== */
+    /* ===== ТАЙМЕР ===== */
     .wedding-block {
       position: relative;
       height: 90vh;
@@ -483,7 +475,7 @@
     }
     .wedding-block h1 {
       margin-top: 20px;
-      font-size: clamp(38px, 8vw, 56px);
+      font-size: clamp(40px, 8vw, 56px); /* оставим чуть крупнее */
       letter-spacing: 3px;
       font-weight: 400;
     }
@@ -524,7 +516,7 @@
       margin: 0 auto;
     }
     .contacts-block h2 {
-      font-size: 48px;
+      font-size: 44px; /* единый размер */
       margin-bottom: 30px;
       font-weight: 400;
     }
@@ -572,7 +564,7 @@
       font-weight: 400;
     }
 
-    /* ===== RSVP (анкета) — убрано слово Rsvp, улучшены радио/чекбоксы ===== */
+    /* ===== RSVP (анкета) ===== */
     .rsvp {
       background: #b7a99a;
       color: #fff;
@@ -583,12 +575,12 @@
       margin: 0 auto;
     }
     .rsvp h2 {
-      font-size: 48px;
+      font-size: 44px; /* единый размер */
       margin-bottom: 10px;
       font-weight: 400;
     }
     .rsvp .subtitle {
-      display: none;
+      display: none; /* убираем Rsvp */
     }
     .rsvp .note {
       font-size: 18px;
@@ -720,34 +712,33 @@
     @media (max-width: 768px) {
       section { padding: 60px 16px; }
       .hero .names { font-size: clamp(44px, 9vw, 72px); gap: 10px; }
-      .hero .date { font-size: clamp(36px, 7vw, 60px); right: 4%; top: 28%; }
-      .frame { max-width: 440px; }
-      .invite-block h2 { font-size: 36px; }
+      .hero .date { font-size: clamp(36px, 7vw, 60px); right: 4%; top: 35%; }
+      .invite-block h2 { font-size: 38px; }
       .invite-block p { font-size: 17px; }
-      .location h2 { font-size: 40px; }
-      .location .sub { font-size: 30px; }
+      .location h2 { font-size: 38px; }
+      .location .sub { font-size: 26px; }
       .info .main { font-size: 20px; }
       .address { font-size: 16px; }
       .btn-location { padding: 14px 34px; font-size: 14px; }
       .location-photo { max-width: 280px; }
-      .timing h2 { font-size: 40px; }
-      .timing .sub { font-size: 30px; }
+      .timing h2 { font-size: 38px; }
+      .timing .sub { font-size: 26px; }
       .time { font-size: 30px; }
       .timing .title { font-size: 22px; }
       .dresscode-section h2 { font-size: 38px; }
-      .subtitle { font-size: 24px; }
+      .dresscode-section .subtitle { font-size: 26px; }
       .dresscode-section p { font-size: 17px; }
       .color-square { width: 44px; height: 44px; flex: 0 0 44px; }
       .color-squares { max-width: 320px; gap: 10px; }
-      .wishes-block h2 { font-size: 34px; }
+      .wishes-block h2 { font-size: 38px; }
       .wishes-text { font-size: 18px; }
-      .rsvp h2 { font-size: 40px; }
+      .rsvp h2 { font-size: 38px; }
       .rsvp .note { font-size: 16px; }
       .rsvp label { font-size: 16px; }
       .rsvp input, .rsvp textarea { font-size: 16px; }
       .radio-group label, .checkbox-group label { font-size: 16px; }
       .rsvp button { font-size: 16px; padding: 14px; }
-      .contacts-block h2 { font-size: 40px; }
+      .contacts-block h2 { font-size: 38px; }
       .person { font-size: 17px; }
       .invite { font-size: 24px; }
       .names-sign { font-size: 40px; }
@@ -760,42 +751,41 @@
       .heart-number { width: 44px; height: 44px; }
       .heart-number i { font-size: 44px; }
       .heart-number span { font-size: 20px; }
-      .story-grid { max-width: 340px; gap: 12px; }
+      .story-grid { max-width: 380px; gap: 14px; }
     }
 
     @media (max-width: 480px) {
       section { padding: 50px 12px; }
-      .hero .names { font-size: clamp(32px, 7vw, 48px); gap: 6px; flex-wrap: wrap; white-space: normal; }
-      .hero .date { font-size: clamp(28px, 6vw, 40px); right: 4%; top: 24%; }
-      .frame { max-width: 320px; }
-      .invite-block h2 { font-size: 30px; }
+      .hero .names { font-size: clamp(32px, 7vw, 48px); gap: 6px; }
+      .hero .date { font-size: clamp(28px, 6vw, 40px); right: 4%; top: 32%; }
+      .invite-block h2 { font-size: 32px; }
       .invite-block p { font-size: 15px; }
-      .location h2 { font-size: 34px; }
-      .location .sub { font-size: 26px; }
+      .location h2 { font-size: 32px; }
+      .location .sub { font-size: 24px; }
       .info .main { font-size: 18px; }
       .address { font-size: 14px; }
       .btn-location { padding: 12px 24px; font-size: 13px; }
       .location-photo { max-width: 240px; }
-      .timing h2 { font-size: 34px; }
-      .timing .sub { font-size: 26px; }
+      .timing h2 { font-size: 32px; }
+      .timing .sub { font-size: 24px; }
       .time { font-size: 26px; }
       .timing .title { font-size: 20px; }
       .icon { font-size: 44px; }
       .dresscode-section h2 { font-size: 32px; }
-      .subtitle { font-size: 22px; }
+      .dresscode-section .subtitle { font-size: 24px; }
       .dresscode-section p { font-size: 15px; }
       .color-square { width: 38px; height: 38px; flex: 0 0 38px; }
       .color-squares { max-width: 270px; gap: 8px; }
-      .wishes-block h2 { font-size: 30px; }
+      .wishes-block h2 { font-size: 32px; }
       .wishes-text { font-size: 16px; }
-      .rsvp h2 { font-size: 34px; }
+      .rsvp h2 { font-size: 32px; }
       .rsvp .note { font-size: 14px; }
       .rsvp label { font-size: 15px; }
       .rsvp input, .rsvp textarea { font-size: 15px; }
       .radio-group label, .checkbox-group label { font-size: 15px; gap: 10px; }
       .radio-group label::before, .checkbox-group label::before { width: 20px; height: 20px; }
       .rsvp button { font-size: 15px; padding: 12px; }
-      .contacts-block h2 { font-size: 34px; }
+      .contacts-block h2 { font-size: 32px; }
       .person { font-size: 15px; }
       .invite { font-size: 22px; }
       .names-sign { font-size: 34px; }
@@ -812,7 +802,7 @@
       .month { font-size: 28px; }
       .footer-text { font-size: 15px; }
       .checkbox-group { flex-direction: column; gap: 4px; }
-      .story-grid { max-width: 280px; gap: 10px; }
+      .story-grid { max-width: 300px; gap: 12px; }
     }
   </style>
 </head>
@@ -845,7 +835,7 @@
   <audio id="weddingAudio" src="music.mp3" loop preload="auto"></audio>
 </div>
 
-<!-- 4 КВАДРАТНЫХ ФОТО (без заголовка) -->
+<!-- 4 КВАДРАТНЫХ ФОТО (увеличены) -->
 <section class="story-photos">
   <div class="story-grid fade-item">
     <img src="молодые2.jpeg" alt="Фото 1">
@@ -855,9 +845,8 @@
   </div>
 </section>
 
-<!-- ПРИГЛАШЕНИЕ (фото увеличено) -->
+<!-- ПРИГЛАШЕНИЕ (без фото) -->
 <section class="invite-block">
-  <div class="frame fade-item"><img src="молодые5.jpeg" alt="Пара"></div>
   <h2 class="fade-item">РОДНЫЕ И ЛЮБИМЫЕ!</h2>
   <p class="fade-item">Хотим, чтобы вы разделили с нами радость и были на торжестве в самый лучший и трогательный день в нашей жизни!</p>
 </section>
@@ -871,7 +860,7 @@
   <p class="footer-text fade-item">Мы будем безумно рады видеть вас в кругу наших гостей</p>
 </section>
 
-<!-- МЕСТО ПРОВЕДЕНИЯ (теперь в стиле Тайминга) -->
+<!-- МЕСТО ПРОВЕДЕНИЯ (в стиле Тайминга) -->
 <section class="location">
   <h2 class="fade-item">МЕСТО</h2>
   <div class="sub fade-item">проведения</div>
