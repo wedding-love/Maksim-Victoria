@@ -95,13 +95,14 @@
     }
 
     /* Отступы между блоками */
-    section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
+    section, .music, .rsvp, .contacts-block, .wishes-block {
       margin: 0;
       padding: 50px 20px;
     }
 
     .wedding-block {
       padding: 0;
+      margin: 0;
     }
 
     /* ----- ПЛАВНАЯ АНИМАЦИЯ ПОЯВЛЕНИЯ ----- */
@@ -132,7 +133,7 @@
       background-color: #ffffff;
     }
     .block-1 .date-top {
-      font-size: clamp(28px, 8vw, 48px); /* теперь такой же, как у имён */
+      font-size: clamp(28px, 8vw, 48px);
       font-weight: 400;
       letter-spacing: 3px;
       margin-bottom: 12px;
@@ -481,7 +482,7 @@
       color: #333;
     }
 
-    /* ===== ТАЙМЕР ===== */
+    /* ===== ТАЙМЕР (заголовок вверху, отсчёт внизу) ===== */
     .wedding-block {
       position: relative;
       height: 85vh;
@@ -489,7 +490,7 @@
       background: url('молодые.jpeg') center/cover no-repeat;
       color: white;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       text-align: center;
       padding: 0;
@@ -504,27 +505,31 @@
       position: relative;
       z-index: 2;
       width: 100%;
-      padding: 50px 30px;
+      height: 100%;
+      padding: 30px 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100%;
+      align-items: center;
     }
     .wedding-block h1 {
-      margin-top: 30px;
+      margin: 0;
+      padding-top: 10px;
       font-size: clamp(32px, 7vw, 48px);
       letter-spacing: 2px;
       font-weight: 400;
       text-align: center;
+      align-self: flex-start;
+      width: 100%;
     }
     .wedding-block .timer {
       width: 100%;
       display: flex;
       justify-content: center;
       gap: 40px;
-      margin-bottom: 50px;
       flex-wrap: wrap;
-      padding: 0 10px;
+      padding-bottom: 10px;
+      align-self: flex-end;
     }
     .wedding-block .timer div {
       text-align: center;
@@ -747,7 +752,7 @@
 
     /* ----- АДАПТИВНОСТЬ ----- */
     @media (max-width: 768px) {
-      section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
+      section, .music, .rsvp, .contacts-block, .wishes-block {
         padding: 40px 16px;
       }
 
@@ -799,10 +804,10 @@
       .invite { font-size: 24px; }
       .names-sign { font-size: 40px; }
 
-      .wedding-block .timer span { font-size: 48px; }
-      .wedding-block .timer { gap: 30px; }
-      .wedding-block h1 { font-size: clamp(32px, 6vw, 44px); }
-      .wedding-block .content { padding: 40px 20px; }
+      .wedding-block .content { padding: 20px 20px; }
+      .wedding-block h1 { font-size: clamp(28px, 5vw, 38px); }
+      .wedding-block .timer span { font-size: 44px; }
+      .wedding-block .timer { gap: 25px; }
 
       .calendar-date { font-size: 30px; }
       .weekdays { max-width: 340px; font-size: 14px; }
@@ -814,7 +819,7 @@
     }
 
     @media (max-width: 480px) {
-      section, .music, .rsvp, .contacts-block, .wedding-block, .wishes-block {
+      section, .music, .rsvp, .contacts-block, .wishes-block {
         padding: 30px 12px;
       }
 
@@ -870,11 +875,11 @@
       .invite { font-size: 22px; }
       .names-sign { font-size: 34px; }
 
+      .wedding-block .content { padding: 15px 15px; }
+      .wedding-block h1 { font-size: clamp(22px, 4.5vw, 28px); }
       .wedding-block .timer span { font-size: 32px; }
-      .wedding-block .timer { gap: 15px; margin-bottom: 40px; }
-      .wedding-block h1 { font-size: clamp(24px, 5vw, 30px); margin-top: 10px; }
+      .wedding-block .timer { gap: 12px; }
       .timer div { min-width: 40px; }
-      .wedding-block .content { padding: 30px 16px; }
 
       .calendar-date { font-size: 26px; }
       .weekdays { max-width: 280px; font-size: 12px; }
@@ -1000,7 +1005,7 @@
   <p class="wishes-text fade-item">Главное для нас – ваше внимание, а радость доставит любой подарок в конверте!</p>
 </section>
 
-<!-- ТАЙМЕР -->
+<!-- ТАЙМЕР (заголовок вверху, отсчёт внизу) -->
 <section class="wedding-block">
   <div class="overlay"></div>
   <div class="content">
